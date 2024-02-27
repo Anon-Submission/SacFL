@@ -16,4 +16,10 @@ Code for the paper "SacFL: Self-Adaptive Federated Continual Learning towards Re
 
 To construct the required data, we provide some tools in `` dataset/data_process.py ``.
 
-# SacFL
+# Benchmarks
+- CFeD: Continual federated learning based on knowledge distillation
+- LwF-Fed: Continual federated learning based on knowledge distillation
+- EWC-Fed: Overcoming catastrophic forgetting in neural networks
+- MultiHead-Fed: Continual federated learning based on knowledge distillation
+- FedAvg: Continual federated learning based on knowledge distillation
+- FedProx: Federated optimization in heterogeneous networks

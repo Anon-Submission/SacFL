@@ -19,7 +19,7 @@ import pandas as pd
 from importlib import import_module
 
 
-def train_ccfed(config, model, train_dataset, dev_datasets, mu):
+def train_sacfl(config, model, train_dataset, dev_datasets, mu):
     x = import_module('models.' + config.model_name)
     start_time = time.time()
     logger = SummaryWriter('../logs')

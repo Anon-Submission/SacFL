@@ -3,7 +3,7 @@ import time
 import torch
 import torch.nn as nn
 import numpy as np
-from train_eval_fed import train, test, train_CFeD, train_ewc, train_multihead, train_lwf, train_DMC, train_ccfed
+from train_eval_fed import train, test, train_CFeD, train_ewc, train_multihead, train_lwf, train_DMC, train_sacfl
 from importlib import import_module
 from utils import build_usergroup, get_parameter_number, init_network, init_network_resnet
 import argparse
@@ -73,7 +73,7 @@ if __name__ == '__main__':
         model = x.Model(config).to(config.device)
         init_network(model)
     if args.paradigm.lower() == 'sacfl':
-        train_ccfed(config, model, train_datas, dev_datas, 1)
+        train_sacfl(config, model, train_datas, dev_datas, 1)
     elif args.paradigm.lower() == 'cfed':
         train_CFeD(config, model, train_datas, dev_datas, copy.deepcopy(train_datas[-1]))
     elif args.paradigm.lower() == 'ewc':
